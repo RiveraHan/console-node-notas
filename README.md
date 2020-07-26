@@ -27,17 +27,17 @@ node app borrar -d "Vacunar Perro"
 ```
 ### Listar
 
--Todas
+- Todas
 ``` 
 node app listar
 ```
 
--Realizadas
+- Realizadas
 ``` 
 node app realizadas
 ```
 
--Pendientes
+- Pendientes
 ``` 
 node app pendientes
 ```
