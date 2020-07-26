@@ -1,11 +1,13 @@
 const descripcion = {
     demand: true,
+    type: 'string',
     alias: 'd',
     desc: 'Tareas por hacer'
 }
 
 const complet = {
     defeault: true,
+    type: 'boolean',
     alias: 'c',
     desc: 'Marca como completado'
 }

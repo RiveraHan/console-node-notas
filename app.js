@@ -5,6 +5,7 @@ const colors = require('colors');
 
 
 const comando = argv._[0];
+const listado = porHacer.getListado();
 
 switch (comando) {
 
@@ -14,13 +15,43 @@ switch (comando) {
         break;
 
     case 'listar':
-        let listado = porHacer.getListado();
+
+        console.log('============Todas las tareas============\n'.yellow);
 
         for (let tarea of listado) {
-            console.log('============Por Hacer============'.yellow);
+            console.log('========================================\n'.yellow);
             console.log(tarea.descripcion);
             console.log('Estado:', tarea.complet);
             console.log('================================='.yellow);
+
+        }
+        break;
+    case 'realizadas':
+
+        console.log('============Realizadas============\n'.green);
+
+        for (let tarea of listado) {
+            if (tarea.complet) {
+                console.log('==================================\n'.green);
+                console.log(tarea.descripcion);
+                console.log('Estado:', tarea.complet);
+                console.log('================================='.green);
+            }
+
+        }
+        break;
+
+    case 'pendientes':
+
+        console.log('============Por Hacer============\n'.red);
+
+        for (let tarea of listado) {
+            if (!tarea.complet) {
+                console.log('================================='.red);
+                console.log(tarea.descripcion);
+                console.log('Estado:', tarea.complet);
+                console.log('================================='.red);
+            }
 
         }
         break;

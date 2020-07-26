@@ -40,7 +40,7 @@ const getListado = () => {
     return listadoPorHacer;
 }
 
-const actualizar = (descripcion, complet = true) => {
+const actualizar = (descripcion, complet) => {
     cargarDB();
 
     let index = listadoPorHacer.findIndex(tarea => tarea.descripcion === descripcion);
