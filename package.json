@@ -1,5 +1,5 @@
 {
-    "name": "04-por-hacer",
+    "name": "Notes Console",
     "version": "1.0.0",
     "description": "Aplicación de consolas para guardar notas",
     "main": "index.js",
